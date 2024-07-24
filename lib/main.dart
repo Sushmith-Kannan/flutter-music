@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:try_app/pages/artistpage.dart';
 import 'package:try_app/pages/navigationbar.dart';
 import 'package:try_app/themes/light_mode.dart';
 import 'package:try_app/themes/theme_provider.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: Provider.of<ThemeProvider>(context).themeData,
       home: BottomNavigationBarExample(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:try_app/pages/artistpage.dart';
+import 'package:try_app/pages/musicplayer.dart';
 import 'package:try_app/pages/settingspage.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -21,18 +23,24 @@ class MyDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 25.0),
             child: ListTile(
-              title: Text(
-                "H O M E",
-                style: TextStyle(
+                title: Text(
+                  "A R T I S T S",
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  ),
+                ),
+                leading: Icon(
+                  Icons.home,
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
-              ),
-              leading: Icon(
-                Icons.home,
-                color: Theme.of(context).colorScheme.inversePrimary,
-              ),
-              onTap: () => Navigator.pop(context),
-            ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ArtistsScreen(),
+                      ));
+                }),
           ),
           Padding(
             padding: const EdgeInsets.only(
